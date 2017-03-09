@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="">
+  <div v-bind:class="{ loading }">
     <nav>
       <router-link v-bind:to="{ name: 'index' }">See All Blogs</router-link>
       <router-link v-bind:to="{ name: 'new-post' }">Add New Blog</router-link>
@@ -14,10 +14,13 @@
 </template>
 
 <script>
+import store from '../store';
+
 export default {
   name: 'Application',
   data() {
     return {
+      loading: this.$select('loading')
     };
   },
 
