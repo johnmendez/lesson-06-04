@@ -2,7 +2,7 @@
   <div class="">
     <nav>
       <router-link v-bind:to="{ name: 'index' }">See All Blogs</router-link>
-      <router-link v-bind:to="{ name: 'index' }">Add New Blog</router-link>
+      <router-link v-bind:to="{ name: 'new-post' }">Add New Blog</router-link>
     </nav>
 
     <div class="section">

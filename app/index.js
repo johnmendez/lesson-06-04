@@ -4,6 +4,7 @@ import VueRouter from 'vue-router';
 
 import App from './routes/application.vue';
 import Index from './routes/index.vue';
+import NewPost from './routes/new-post.vue';
 
 Vue.use(VueRouter);
 
@@ -13,6 +14,11 @@ const routes = [
     component: Index,
     name: 'index',
   },
+  {
+    path: '/new-post',
+    component: NewPost,
+    name: 'new-post',
+  }
 ];
 
 const router = new VueRouter({
