@@ -20,6 +20,9 @@
 </template>
 
 <script>
+import store from '../store';
+import { add } from '../actions/post';
+
 export default {
   data() {
     return {
@@ -33,7 +36,11 @@ export default {
   },
 
   methods: {
-
+    submit() {
+      store.dispatch(add(this.values)).then(() => {
+        this.$router.push({ name: 'index' });
+      });
+    }
   },
 };
 </script>
